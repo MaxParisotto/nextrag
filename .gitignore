@@ -1,0 +1,58 @@
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE-specific files
+.idea/
+.vscode/
+*.swp
+
+# Node.js
+node_modules/
+
+# Composer dependencies
+vendor/
+
+# Build artifacts
+build/
+dist/
+webpack-out/
+
+# Temporary files
+*.log
+*.tmp
+*.cache
+*.bak
+*.old
+
+# PHP-specific
+phpunit.xml
+phpunit.xml.dist
+
+# Coverage reports
+coverage/
+*.coverage
+*.cov
+
+# Nextcloud-generated files
+/nextcloud.log
+/data/
+/config/config.php
+
+# App packaging artifacts
+autoloaderchecker.php
+build/autoloaderchecker.php
+appstore/
+appstore-build/
+
+# Personal or custom configuration files
+.env
+.env.local
+
+# Include essential app directories
+!appinfo/
+!templates/
+!lib/
+
+# Include test files
+!tests/
