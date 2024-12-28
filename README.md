@@ -1,4 +1,4 @@
-# NextRAG DEV
+# NextRAG
 
 A template to get started with Nextcloud app development.
 
