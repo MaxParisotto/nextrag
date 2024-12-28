@@ -1,47 +1,30 @@
 <template>
-  <NcContent app-name="nextrag">
-    <NcAppNavigation>
-      <template #list>
-        <NcAppNavigationItem
-          id="home"
-          icon="icon-home"
-          :exact="true"
-          title="Home"
-          to="/"
-        />
-        <NcAppNavigationItem
-          id="useful"
-          icon="icon-category-tools"
-          title="Useful"
-          to="/useful"
-        />
-      </template>
-    </NcAppNavigation>
-
+  <div id="content" class="app-nextrag">
+    <Navigation />
     <NcAppContent>
+      <!-- Your main content here -->
       <router-view />
     </NcAppContent>
-  </NcContent>
+  </div>
 </template>
 
 <script>
-import { NcContent, NcAppNavigation, NcAppNavigationItem, NcAppContent } from '@nextcloud/vue'
+import Navigation from './components/Navigation.vue'
+import { NcAppContent } from '@nextcloud/vue'
 
 export default {
   name: 'App',
   components: {
-    NcContent,
-    NcAppNavigation,
-    NcAppNavigationItem,
-    NcAppContent
-  }
+    Navigation,
+    NcAppContent,
+  },
 }
 </script>
 
-<style scoped lang="scss">
-#nextrag {
-	display: flex;
-	justify-content: center;
-	margin: 16px;
+<style scoped>
+.app-nextrag {
+  display: flex;
+  width: 100%;
+  height: 100%;
 }
 </style>

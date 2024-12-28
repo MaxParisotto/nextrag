@@ -1,25 +1,14 @@
-import { createApp } from 'vue'
-import { createRouter, createWebHashHistory } from 'vue-router'
+import Vue from 'vue'
 import App from './App.vue'
-import Home from './views/Home.vue'
-import Useful from './views/Useful.vue'
+import router from './router'
+import { translate, translatePlural } from '@nextcloud/l10n'
 
-const router = createRouter({
-  history: createWebHashHistory(),
-  routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: Home
-    },
-    {
-      path: '/useful',
-      name: 'useful',
-      component: Useful
-    }
-  ]
+// Add global translations
+Vue.prototype.t = translate
+Vue.prototype.n = translatePlural
+
+export default new Vue({
+	el: '#content',
+	router,
+	render: h => h(App),
 })
-
-const app = createApp(App)
-app.use(router)
-app.mount('#content-nextrag')
