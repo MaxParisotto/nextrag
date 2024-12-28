@@ -19,7 +19,7 @@
   "dependencies": {
     "@nextcloud/vue": "^8.11.2",
     "@nextcloud/l10n": "^2.2.0",
-    "vue": "^2.7.16",
+    "vue": "^3.0.0",
     "vue-router": "^3.6.5"
   },
   "devDependencies": {
