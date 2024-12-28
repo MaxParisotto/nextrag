@@ -18,6 +18,7 @@ return [
             'controller' => 'PageController',
             'action' => 'useful',
         ],
+        ['name' => 'page#index', 'url' => '/', 'verb' => 'GET'],
     ],
     'resources' => [],
 ];

@@ -17,6 +17,11 @@ use OCP\IRequest;
  * @psalm-suppress UnusedClass
  */
 class PageController extends Controller {
+
+    public function __construct(string $appName, IRequest $request) {
+        parent::__construct($appName, $request);
+    }
+
 	#[NoCSRFRequired]
 	#[NoAdminRequired]
 	#[OpenAPI(OpenAPI::SCOPE_IGNORE)]

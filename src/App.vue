@@ -1,19 +1,40 @@
 <template>
-	<NcAppContent>
-		<div id="nextrag">
-			<h1>Hello world!</h1>
-		</div>
-	</NcAppContent>
+  <NcContent app-name="nextrag">
+    <NcAppNavigation>
+      <template #list>
+        <NcAppNavigationItem
+          id="home"
+          icon="icon-home"
+          :exact="true"
+          title="Home"
+          to="/"
+        />
+        <NcAppNavigationItem
+          id="useful"
+          icon="icon-category-tools"
+          title="Useful"
+          to="/useful"
+        />
+      </template>
+    </NcAppNavigation>
+
+    <NcAppContent>
+      <router-view />
+    </NcAppContent>
+  </NcContent>
 </template>
 
 <script>
-import NcAppContent from '@nextcloud/vue/dist/Components/NcAppContent.js'
+import { NcContent, NcAppNavigation, NcAppNavigationItem, NcAppContent } from '@nextcloud/vue'
 
 export default {
-	name: 'App',
-	components: {
-		NcAppContent,
-	},
+  name: 'App',
+  components: {
+    NcContent,
+    NcAppNavigation,
+    NcAppNavigationItem,
+    NcAppContent
+  }
 }
 </script>
 
